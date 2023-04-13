@@ -20,7 +20,6 @@ const About = () => {
                     <AnimatedLetters letterClass={letterClass} strArray={aboutArray} idx={43}/>
                 </span>
             </h1>
-
             </div>
         </div>
     )
