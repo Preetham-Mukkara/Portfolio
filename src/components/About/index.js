@@ -4,10 +4,11 @@ import './index.scss';
 import { useState,useEffect } from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faPython, faGithub, faJava, faJsSquare, faReact, faDocker } from '@fortawesome/free-brands-svg-icons';
+import {Loader} from 'react-loaders';
 
 const About = () => {
     const  [letterClass, setLetterClass] = useState('text-animate')
-    const aboutArray = ['A','b','o','u','t'];
+    const aboutArray = ['A','b','o','u','t',' ','m','e'];
 
     useEffect(()=>{
         setTimeout(()=> {
@@ -16,13 +17,14 @@ const About = () => {
       },[])
 
     return (
-        <div className='containter about'>
+        <>
+        <div className='container about-page'>
             <div className='text-zone'>
-            <h1>
-                <span>
-                    <AnimatedLetters letterClass={letterClass} strArray={aboutArray} idx={43}/>
-                </span>
-            </h1>
+                <h1>
+                    <AnimatedLetters letterClass={letterClass} 
+                    strArray={aboutArray} 
+                    idx={15}/>
+                </h1>
             <p>
                 I was born in India, and moved around a lot in America before my family settled down in the state of Minnesota.
                 I ended up going back to India during my highschool years and fell in love with Bollywood, Tollywood, Cricket and THE FOOD!
@@ -61,6 +63,8 @@ const About = () => {
                 </div>
             </div>
         </div>
+        <Loader type="pacman"/>
+        </>
     )
 }
 
